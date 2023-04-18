@@ -16,4 +16,8 @@ What properties do the conformal prediction sets need to satisfy?
 - The sets should be small sized
 - The sets need to be adaptive i.e. small set for easy problems and larger set for difficult problems
 
+Algorithm to create the set $\tau(.)$ (Vovk et. al. - 1998)
+
+1) For each $(X_i,Y_i)$ get the score predicted by the model for the input $X_i$ i.e. get the softmax scores. Now, take the score for the correct class $Y_i$ and denote the score as $E_i$. Repeat for all examples in caliberation set, so we have ${E_1,...,E_n}$
+
 
