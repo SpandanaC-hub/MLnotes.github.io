@@ -11,4 +11,9 @@ For the new image or data point, the method will provide us a set $\tau(X_{n+1})
 
 Therefore, $P(y_{n+1}\in \tau(X_{n+1})\geq 1-\alpha$, so coverage is high
 
+What properties do the conformal prediction sets need to satisfy?
+- The sets need to at the least provide conservative coverage
+- The sets should be small sized
+- The sets need to be adaptive i.e. small set for easy problems and larger set for difficult problems
+
 
