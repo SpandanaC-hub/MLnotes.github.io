@@ -19,5 +19,7 @@ What properties do the conformal prediction sets need to satisfy?
 Algorithm to create the set $\tau(.)$ (Vovk et. al. - 1998)
 
 1) For each $(X_i,Y_i)$ get the score predicted by the model for the input $X_i$ i.e. get the softmax scores. Now, take the score for the correct class $Y_i$ and denote the score as $E_i$. Repeat for all examples in caliberation set, so we have ${E_1,...,E_n}$
+2) Take the 10% quantile over the scores {E_i}_{i=1}^n and call it $\hat{q}$. Therefore, atleast 90% of the scores will be greater than $\hat{q}$
+3) For a new data point $X_{n+1}$, the prediction set would be the set of all classes whose scores fall above $\hat{q}$ when $X_{n+1}$ is input. 
 
 
