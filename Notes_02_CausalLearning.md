@@ -1,5 +1,5 @@
 ## Causal Inference
-Cause is defined by David Hume as an object followed by another object, where if the first object had not been, the second had never existed.
+Cause is defined by David Hume as an object followed by another object, where if the first object had not been, the second had never existed. [Simpson's paradox](https://en.wikipedia.org/wiki/Simpson%27s_paradox)  is a motivating example for causal inference. 
 
 ### Counterfactual claims
 The counterfactual theory of causation states that if A causes B, then this implies that if A did not occur then B will not occur. But observed counterfactuals is difficult, eg. we want to assess whether a drug causes improvement in symptoms. A subject cannot receive and not receive drug at the same time.
