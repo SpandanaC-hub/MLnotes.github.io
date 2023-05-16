@@ -13,7 +13,7 @@ A well caliberated model allows us to evaluate performance of differnet models a
 1) Reliability curves, plot model prediction on X-axis and ground truth on Y-axis.
 2) Cross-entropy or log-loss : penalises models that are overconfident. A well-caliberated mdoel should have low log-loss.
 3) Expected Caliberation Error 
-4) 
+ 
 ## Techniques for caliberation
 Train-test-val split of data followed by model caliberation using Platt Scaling, isotonic regression, Spline Caliberation, etc.
 
