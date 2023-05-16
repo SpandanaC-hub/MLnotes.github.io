@@ -16,3 +16,6 @@ A model trained to distinguish images of cats and dogs, learns to correlate feat
 
 A model could learn features of a disease in the dataset to predict presence of disease, but the learnt features might not explain the cause of the disease. So using these models to study cause-and-effect is challenging. Hence, models that explicitly capture causal relations can be more useful in application where we are interested in investigating underlying disease mechanisms.
 
+### What is Average Treatment Effect?
+Causal effect is the difference between outcomes in the real world and the counterfactual world. In average treatment effect (ATE), we compute difference in expected outcome when treatment is give vs when treatment is not given. In CATE (Conditional average treatment effect), we compute the difference conditioned on some covariate.
+
