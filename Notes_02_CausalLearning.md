@@ -25,7 +25,8 @@ T = {0,1} denotes whether subject received treatment i.e. observed treatment.  Y
 #### What is Average Treatment Effect?
 Causal effect is the difference between outcomes in the real world and the counterfactual world. In average treatment effect (ATE), we compute difference in expected outcome when treatment is give vs when treatment is not given. ATE = E[Y(T=1)]-E[Y(T=0)]. The difference in these potential outcomes is usually not equal to the difference in conditional expectations i.e. ATE = E[Y(T=1)]-E[Y(T=0)] $\ne$ E[Y|T=1]-E[Y|T=0]. This is due to the presence of confounding. This is because the difference in condition expectation is not a causal quantity, it is a mixture of causal and confounding assocition. To prevent confounding, people use randomized control trials where the treatmenta nd no treatment grouos are randomly assigned thereby removing confounding associations.
 
-
+### Observational Studies
+Since randomizing subjects to different groups is not always feasible, observation studies usually have confounding association that cannot be ignored. Hence, measuring causal effects in observation studies requires us to explicitly control for confounders.
 
 In CATE (Conditional average treatment effect), we compute the difference conditioned on some covariate.
 
