@@ -23,5 +23,9 @@ Availability heuristic and motivated reasoning are both cognitive biases which r
 T = {0,1} denotes whether subject received treatment i.e. observed treatment.  Y denotes the observed outcome. Then for a subject i, $Y_i(T=0)$ represents  outcome when treatment was not given and $Y_i(T=1)$ represents outcome when treatment was given. The causal effect of treatment on subject i's outcome is therefore equal to $Y_i(T=1)-Y_i(T=0) = ITE$ (ITE refers to individual treatment effect). And herein lies the fundamental problem with causal inference which we previously described which is that we cannot observe the counterfactual of subject i not receiving treatment when subject i already received treatment. Hence, we need to look at the average treatment effect.
 
 #### What is Average Treatment Effect?
-Causal effect is the difference between outcomes in the real world and the counterfactual world. In average treatment effect (ATE), we compute difference in expected outcome when treatment is give vs when treatment is not given. ATE = E[Y(T=1)]-E[Y(T=1)]. In CATE (Conditional average treatment effect), we compute the difference conditioned on some covariate.
+Causal effect is the difference between outcomes in the real world and the counterfactual world. In average treatment effect (ATE), we compute difference in expected outcome when treatment is give vs when treatment is not given. ATE = E[Y(T=1)]-E[Y(T=0)]. The difference in these potential outcomes is usually not equal to the difference in conditional expectations i.e. ATE = E[Y(T=1)]-E[Y(T=0)] $\ne$ E[Y|T=1]-E[Y|T=0]. This is due to the presence of confounding. This is because the difference in condition expectation is not a causal quantity, it is a mixture of causal and confounding assocition. To prevent confounding, people use randomized control trials where the treatmenta nd no treatment grouos are randomly assigned thereby removing confounding associations.
+
+
+
+In CATE (Conditional average treatment effect), we compute the difference conditioned on some covariate.
 
