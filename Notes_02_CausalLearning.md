@@ -23,10 +23,16 @@ Availability heuristic and motivated reasoning are both cognitive biases which r
 T = {0,1} denotes whether subject received treatment i.e. observed treatment.  Y denotes the observed outcome. Then for a subject i, $Y_i(T=0)$ represents  outcome when treatment was not given and $Y_i(T=1)$ represents outcome when treatment was given. The causal effect of treatment on subject i's outcome is therefore equal to $Y_i(T=1)-Y_i(T=0) = ITE$ (ITE refers to individual treatment effect). And herein lies the fundamental problem with causal inference which we previously described which is that we cannot observe the counterfactual of subject i not receiving treatment when subject i already received treatment. Hence, we need to look at the average treatment effect.
 
 #### What is Average Treatment Effect?
-Causal effect is the difference between outcomes in the real world and the counterfactual world. In average treatment effect (ATE), we compute difference in expected outcome when treatment is give vs when treatment is not given. ATE = E[Y(T=1)]-E[Y(T=0)]. The difference in these potential outcomes is usually not equal to the difference in conditional expectations i.e. ATE = E[Y(T=1)]-E[Y(T=0)] $\ne$ E[Y|T=1]-E[Y|T=0]. This is due to the presence of confounding. This is because the difference in condition expectation is not a causal quantity, it is a mixture of causal and confounding assocition. To prevent confounding, people use randomized control trials where the treatmenta nd no treatment grouos are randomly assigned thereby removing confounding associations.
+Causal effect is the difference between outcomes in the real world and the counterfactual world. In average treatment effect (ATE), we compute difference in expected outcome when treatment is give vs when treatment is not given. ATE = E[Y(T=1)]-E[Y(T=0)]. The difference in these potential outcomes i.e. causal effect is usually not equal to the difference in conditional expectations i.e. ATE = E[Y(T=1)]-E[Y(T=0)] $\ne$ E[Y|T=1]-E[Y|T=0]. This is due to the presence of confounding. This is because the difference in conditional expectation is not a causal quantity, it is a mixture of causal and confounding assocition. To prevent confounding, people use randomized control trials where the treatment and no treatment groups are randomly assigned thereby removing confounding associations.
+Assumptions where E[Y(1)]-E[Y(0)] = E[Y|T=1]-E[Y|T=0] are:
+1) Ignorability: If potential outcome was independent of treatment group assignment, then E[Y(1)]-E[Y(0)] = E[Y(1)|T=1]-E[Y(0)|T=1] = E[Y|T=1]-E[Y|T=0]
+2) Exchangeability: The Expected outcome conditioned on treatment vs no treatment is the same if the groups were reversed.
 
 ### Observational Studies
 Since randomizing subjects to different groups is not always feasible, observation studies usually have confounding association that cannot be ignored. Hence, measuring causal effects in observation studies requires us to explicitly control for confounders.
 
-In CATE (Conditional average treatment effect), we compute the difference conditioned on some covariate.
+#### CATE (Conditional average treatment effect)
+Since we cannot always use RCT study design, that means potential outcomes are not independent of treatment group assignment. Here, we use conditional exchangeability where we additionally condition of the confounder to get ACTE.
+
+In CATE (Conditional average treatment effect), we compute the difference conditioned on some covariate. ie E[Y(T=1)-Y(T=0)|X] = E[Y(T=1)|X]-E[Y(T=0)|X] = E[Y(T=1)|T=1,X]-E[Y(T=0)|T=0,X]=E[Y|T=1,X]-E[Y|T=0,X]
 
