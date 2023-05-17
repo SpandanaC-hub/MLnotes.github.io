@@ -34,5 +34,5 @@ Since randomizing subjects to different groups is not always feasible, observati
 #### CATE (Conditional average treatment effect)
 Since we cannot always use RCT study design, that means potential outcomes are not independent of treatment group assignment. Here, we use conditional exchangeability where we additionally condition of the confounder to get ACTE.
 
-In CATE (Conditional average treatment effect), we compute the difference conditioned on some covariate. ie E[Y(T=1)-Y(T=0)|X] = E[Y(T=1)|X]-E[Y(T=0)|X] = E[Y(T=1)|T=1,X]-E[Y(T=0)|T=0,X]=E[Y|T=1,X]-E[Y|T=0,X]
+In CATE (Conditional average treatment effect), we compute the difference conditioned on some covariate. ie E[Y(T=1)-Y(T=0)|X] = E[Y(T=1)|X]-E[Y(T=0)|X] = E[Y(T=1)|T=1,X]-E[Y(T=0)|T=0,X]=E[Y|T=1,X]-E[Y|T=0,X]. From this, we can get ATE by margalize out X i.e. E_x[E[Y|T=1,X]-E[Y|T=0,X]]
 
