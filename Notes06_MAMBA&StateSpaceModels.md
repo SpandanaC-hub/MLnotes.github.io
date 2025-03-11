@@ -14,7 +14,7 @@ In text and images the input is discretized tokens or pixels.
 
 So to discretize model use Zero-order hold technique -  hold the value until new value. How long a value is held is decribed by learnable step size $delta$
 So the equations for discrete time-steps is
--$h_k = \bar{A}x_{k} + \bar{B}h_{k-1}$
--$ y_k = D h_k$
+- $h_k = \bar{A}x_{k} + \bar{B}h_{k-1}$
+- $ y_k = D h_k$
 
 
