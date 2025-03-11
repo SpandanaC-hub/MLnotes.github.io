@@ -6,7 +6,7 @@ Due to chain rule, the deeper the network is, during backpropagation more gradie
 
 
 #### Why this happens?
-When activation functions like sigmoid or tanh are used their value is saturated at the extrema, this implies that if the output of a layer is too small or too large then the gradients for that layer will be small. So ReLU activation was suggested as an alternative. But ReLU is prone to explodng gradients, since its gradient is always 1 for outputs greater than 0, so if we have input to relu as $in Wx$ and output as  $out = relu(in)$, then derivative of output wrt weight W is $\frac{\delta out}{\delta W} = \frac{\delta out}{\delta in} \times \frac{\delta in}{\delta W}$, here $\frac{\delta out}{\delta in}=1$ if in in >0 else its 0.
+When activation functions like sigmoid or tanh are used their value is saturated at the extrema, this implies that if the output of a layer is too small or too large then the gradients for that layer will be small. So ReLU activation was suggested as an alternative. But ReLU is prone to explodng gradients, since its gradient is always 1 for outputs greater than 0, so if we have input to relu as $in = Wx$ and output as  $out = relu(in)$, then derivative of output wrt weight W is $\frac{\delta out}{\delta W} = \frac{\delta out}{\delta in} \times \frac{\delta in}{\delta W}$, here $\frac{\delta out}{\delta in}=1$ if in in >0 else its 0.
 So $\frac{\delta out}{\delta W} = (1/0) \times x $,we can note how ehis means gradients can be pretty large when relu is used.
 To circumvent this problem, 
 
